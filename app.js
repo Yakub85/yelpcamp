@@ -1,7 +1,7 @@
-// if(process.env.NODE_ENV !== 'production'){
-//     require('dotenv').config()
-// }
-require('dotenv').config()
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config()
+}
+// require('dotenv').config()
 const express = require('express');
 const app = express();
 const path = require('path')
@@ -157,7 +157,7 @@ app.use((err,req,res,next)=>{
     res.status(statusCode).render('error',{err})
 })
 app.listen(port,()=>{
-    console.log(`Server started on port ${port}`);
+    console.log(`Server started on port${port}`);
 });
 
 
